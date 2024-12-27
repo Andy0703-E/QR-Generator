@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - GenQRcode</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css"
+        integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body class="bg-gray-900 text-gray-100">
+
+    <!-- Navigation -->
+    <nav class="bg-gray-800 py-4 px-6 fixed top-0 w-full z-50">
+        <div class="container mx-auto flex items-center justify-between">
+            <!-- Logo -->
+            <div class="flex items-center">
+                <img src="./nav.png" alt="Logo" class="h-10 w-10 mr-2">
+                <span class="text-2xl font-semibold">GenQRcode</span>
+            </div>
+
+            <!-- Desktop Links -->
+            <div class="hidden md:flex gap-6 items-center">
+                <a class="text-gray-300 hover:text-white transition" href="./">Home</a>
+                <a class="text-gray-300 hover:text-white transition" href="./features.html">Features</a>
+                <a class="text-gray-300 hover:text-white transition" href="./contact.html">Contact</a>
+                <a class="text-gray-300 hover:text-white transition" href="./about.html">About</a>
+            </div>
+
+            <!-- Hamburger Icon for Mobile -->
+            <div class="md:hidden flex items-center">
+                <button id="hamburger" class="text-gray-300 hover:text-white text-2xl">
+                    <i class="ri-menu-line"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sidebar (Hidden by default) -->
+    <div id="sidebar"
+        class="fixed inset-0 bg-gray-800 bg-opacity-90 z-40 transform -translate-x-full md:hidden transition-transform">
+        <div class="flex justify-end p-4">
+            <button id="close-sidebar" class="text-white text-3xl">
+                <i class="ri-close-line"></i>
+            </button>
+        </div>
+        <div class="flex flex-col h-screen justify-center content-center items-center">
+            <a class="text-gray-300 hover:text-white text-lg py-3" href="./">Home</a>
+            <a class="text-gray-300 hover:text-white text-lg py-3" href="./features.html">Features</a>
+            <a class="text-gray-300 hover:text-white text-lg py-3" href="./contact.html">Contact</a>
+            <a class="text-gray-300 hover:text-white text-lg py-3" href="./about.html">About</a>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 px-6 bg-gray-900 text-center">
+        <div class="container mx-auto">
+            <h2 class="text-4xl font-bold mt-4 mb-8">Why Choose GenQRcode?</h2>
+            <p class="text-gray-400 mb-12 text-xl">GenQRcode helps you track the performance of your QR codes and create
+                fully
+                customized landing pages without any coding knowledge. Here's why it's the right choice for you:</p>
+
+            <!-- Benefits List -->
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-gray-700 p-6 rounded-lg">
+                    <div class="flex items-center mb-4">
+                        <i class="ri-building-line text-3xl text-blue-500 mr-4"></i>
+                        <h3 class="text-2xl font-semibold"> Dynamic QR Codes</h3>
+                    </div>
+                    <p class="text-gray-400">Create dynamic QR codes that can be updated with new content, so you never
+                        need
+                        to print a new one.</p>
+                </div>
+                <div class="bg-gray-700 p-6 rounded-lg">
+                    <div class="flex items-center mb-4">
+                        <i class="ri-bubble-chart-line text-3xl text-green-500 mr-4"></i>
+                        <h3 class="text-2xl font-semibold">Static QR Codes</h3>
+                    </div>
+                    <p class="text-gray-400">Generate static QR codes with fixed information that will always link to
+                        the
+                        same URL or content.</p>
+                </div>
+                <div class="bg-gray-700 p-6 rounded-lg">
+                    <div class="flex items-center mb-4">
+                        <i class="ri-bar-chart-box-line text-3xl text-orange-500 mr-4"></i>
+                        <h3 class="text-2xl font-semibold">QR Code Statistics</h3>
+                    </div>
+                    <p class="text-gray-400">Track how many times your QR codes are scanned, the locations, and the
+                        dates,
+                        so you can measure the success of your campaigns.</p>
+                </div>
+                <div class="bg-gray-700 p-6 rounded-lg">
+                    <div class="flex items-center mb-4">
+                        <i class="ri-pencil-line text-3xl text-purple-500 mr-4"></i>
+                        <h3 class="text-2xl font-semibold">Fully Customized Landing Pages</h3>
+                    </div>
+                    <p class="text-gray-400">Easily create personalized landing pages for your QR codes, with no coding
+                        required. Customize the design and content to fit your needs.</p>
+                </div>
+                <div class="bg-gray-700 p-6 rounded-lg">
+                    <div class="flex items-center mb-4">
+                        <i class="ri-palette-line text-3xl text-red-500 mr-4"></i>
+                        <h3 class="text-2xl font-semibold">Customized Colors & Shapes for QR Codes</h3>
+                    </div>
+                    <p class="text-gray-400">Stand out with personalized colors and shapes for your QR codes to match
+                        your
+                        branding or design preferences.</p>
+                </div>
+                <div class="bg-gray-700 p-6 rounded-lg">
+                    <div class="flex items-center mb-4">
+                        <i class="ri-code-line text-3xl text-yellow-500 mr-4"></i>
+                        <h3 class="text-2xl font-semibold">No Coding Required</h3>
+                    </div>
+                    <p class="text-gray-400">You don't need to know how to code. GenQRcode makes it easy for anyone to
+                        create
+                        and manage QR codes.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 py-4 fixed bottom-0 w-full">
+        <div class="container mx-auto text-center">
+            <p class="text-gray-400 text-sm">&copy; 2024 QR Code Generator. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+<script>
+    // Get elements
+    const hamburger = document.getElementById('hamburger');
+    const sidebar = document.getElementById('sidebar');
+    const closeSidebar = document.getElementById('close-sidebar');
+
+    // Open sidebar
+    hamburger.addEventListener('click', () => {
+        sidebar.classList.remove('-translate-x-full');
+    });
+
+    // Close sidebar
+    closeSidebar.addEventListener('click', () => {
+        sidebar.classList.add('-translate-x-full');
+    });
+</script>
+
+</html>
